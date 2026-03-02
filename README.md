@@ -22,7 +22,14 @@ Step 4 — Semantic Item Categorisation. We load all-MiniLM-L6-v2 and embed ever
 Step 5 — Model Training. LightGBM is trained on the 10 engineered features with an 80/20 train-test split. The output is a probability distribution over all ~500 unique items, from which we extract the top-K recommendations.
 
 📊 Results
-MetricValue🎯 Recall@10~82%📈 NDCG@10~0.71🔍 Precision@10~8.2%⚡ Inference latency<2ms per request🧪 Training samples~15,000🍱 Unique target items500+
+| Metric | Value |
+|--------|--------|
+| 🎯 Recall@10 | ~82% |
+| 📈 NDCG@10 | ~0.71 |
+| 🔍 Precision@10 | ~8.2% |
+| ⚡ Inference Latency | <2ms |
+| 🧪 Training Samples | ~15,000 |
+| 🍱 Unique Items | 500+ 
 To put those numbers in context: a global popularity baseline (always recommend the top-10 most ordered items) achieves Recall@10 of roughly 25%. Our model hits 82% — more than three times better — because it actually understands what's in the cart right now.
 
 📁 Project Structure
